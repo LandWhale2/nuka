@@ -34,7 +34,7 @@ class _BottomBarPartState extends State<BottomBarPart> {
 
   final PageStorageBucket bucket = PageStorageBucket();
 
-  int _selectedIndex = 0;
+  int _selectedIndex = 2;
 
   Widget _bottomNavigationBar(int selectedIndex) => BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
