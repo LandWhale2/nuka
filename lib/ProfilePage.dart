@@ -33,12 +33,18 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 Container(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Icon(
-                        Icons.person,
-                        size: 70,
+                      Container(
+                        margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                        child: Icon(
+                          Icons.person,
+                          size: 70,
+                        ),
                       ),
                       Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text('닉네임'),
                           Container(
