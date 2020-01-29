@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'MainPage.dart';
+import 'HomePage.dart';
 import 'ChatPage.dart';
 import 'ChannelPage.dart';
 import 'ProfilePage.dart';
@@ -58,7 +58,7 @@ class _BottomBarPartState extends State<BottomBarPart> {
           icon: Icon(
             Icons.home,
           ),
-          title: Text('home'),
+          title: Text('Home'),
         ),
         BottomNavigationBarItem(
           icon: Icon(
@@ -70,7 +70,7 @@ class _BottomBarPartState extends State<BottomBarPart> {
           icon: Icon(
             Icons.perm_identity,
           ),
-          title: Text('profile'),
+          title: Text('Profile'),
         ),
       ]);
 

@@ -59,8 +59,11 @@ class _MainPageState extends State<MainPage> {
                     width: 100,
                   ),
                   Ink(
-                    decoration: ShapeDecoration(
-                        shape: CircleBorder(), color: Colors.white),
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 4.0, color: Colors.black),
+                      color: Colors.white,
+                      shape: BoxShape.circle
+                    ),
                     child: Icon(
                       Icons.clear,
                       color: Colors.black,
