@@ -22,7 +22,25 @@ class _LikeMeState extends State<LikeMe> {
               fontWeight: FontWeight.bold),
         ),
       ),
-      body: GridView.count(crossAxisCount: 3),
+      body: ListView(
+        children: <Widget>[
+          SizedBox(
+            height: 40,
+          ),
+          GridView.count(
+            shrinkWrap: true,
+            crossAxisCount: 3,
+            children: List.generate(
+              100,
+              (index) {
+                return Center(
+                  child: Image.asset('Images/juhee$index.jpg'),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -9,6 +9,10 @@ class StoryPage extends StatefulWidget {
 class _StoryPageState extends State<StoryPage> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    final double itemHeight = (size.height - kToolbarHeight - 24) / 3;
+    final double itemWidth = size.width / 3;
+
     return Scaffold(
       body: ListView(
         children: <Widget>[
@@ -35,7 +39,27 @@ class _StoryPageState extends State<StoryPage> {
                     ],
                   ),
                   Container(
-                    child: Text('나만의 스토리를 올려보세요'),
+                    margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                    padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.0),
+                      color: Color.fromRGBO(255, 130, 130, 1),
+                    ),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.create,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Text(
+                          '나만의 스토리를 올려보세요',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
                   )
                 ],
               ),
@@ -45,12 +69,16 @@ class _StoryPageState extends State<StoryPage> {
               GridView.count(
                 shrinkWrap: true,
                 crossAxisCount: 3,
+                childAspectRatio: (itemWidth / itemHeight),
                 children: List.generate(100, (index) {
-                  return Center(
-                    child: Image.asset('Images/juhee$index.jpg'),
+                  return Container(
+                    margin: EdgeInsets.all(1.0),
+                    child: Center(
+                      child: Image.asset('Images/juhee$index.jpg'),
+                    ),
                   );
                 }),
-              )
+              ),
             ],
           ),
         ],
