@@ -28,13 +28,28 @@ class _StoryPageState extends State<StoryPage> {
                           size: 60,
                         ),
                       ),
-                      Text('No Recent Story.',style: TextStyle(fontSize: 10),)
+                      Text(
+                        'No Recent Story.',
+                        style: TextStyle(fontSize: 10),
+                      )
                     ],
                   ),
                   Container(
                     child: Text('나만의 스토리를 올려보세요'),
                   )
                 ],
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              GridView.count(
+                shrinkWrap: true,
+                crossAxisCount: 3,
+                children: List.generate(100, (index) {
+                  return Center(
+                    child: Image.asset('Images/juhee$index.jpg'),
+                  );
+                }),
               )
             ],
           ),

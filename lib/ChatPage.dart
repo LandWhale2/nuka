@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'PeopleWhoLikeMe.dart';
 
 class ChatPage extends StatefulWidget {
   const ChatPage({Key key}) : super(key: key);
@@ -15,29 +16,39 @@ class _ChatPageState extends State<ChatPage> {
           Container(
             child: Column(
               children: <Widget>[
-                Container(
-                  margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                  padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15.0),
-                    color: Color.fromRGBO(255, 130, 130, 1),
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        '나를 좋아하는 사람들',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Icon(
-                        Icons.keyboard_arrow_right,
-                        color: Colors.white,
-                      )
-                    ],
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => new LikeMe()),
+                    );
+                  },
+                  child: Container(
+                    margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.0),
+                      color: Color.fromRGBO(255, 130, 130, 1),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          '나를 좋아하는 사람들',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Icon(
+                          Icons.keyboard_arrow_right,
+                          color: Colors.white,
+                        )
+                      ],
+                    ),
                   ),
                 ),
-                SizedBox(height: 100,),
+                SizedBox(
+                  height: 100,
+                ),
                 Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -62,12 +73,14 @@ class _ChatPageState extends State<ChatPage> {
                           ),
                           Container(
                             margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                            padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                            padding: EdgeInsets.fromLTRB(130, 20, 130, 20),
                             color: Colors.grey,
                             child: Text(
                               '뭐 해?',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20,color: Colors.white),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.white),
                             ),
                           ),
                         ],
@@ -91,12 +104,14 @@ class _ChatPageState extends State<ChatPage> {
                           ),
                           Container(
                             margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                            padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                            padding: EdgeInsets.fromLTRB(130, 20, 130, 20),
                             color: Colors.grey,
                             child: Text(
                               '뭐 해?',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20,color: Colors.white),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.white),
                             ),
                           ),
                         ],
