@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'StoryWriting.dart';
 
 class StoryPage extends StatefulWidget {
   const StoryPage({Key key}) : super(key: key);
@@ -21,47 +22,61 @@ class _StoryPageState extends State<StoryPage> {
               SizedBox(
                 height: 30,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      Container(
-                        child: Icon(
-                          Icons.add,
-                          size: 60,
+              FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => new StoryWriting()),
+                  );
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      margin: EdgeInsets.all(10),
+                      child: Container(
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                              child: Icon(
+                                Icons.add,
+                                size: 60,
+                              ),
+                            ),
+                            Text(
+                              'No Recent Story.',
+                              style: TextStyle(fontSize: 10),
+                            ),
+                          ],
                         ),
                       ),
-                      Text(
-                        'No Recent Story.',
-                        style: TextStyle(fontSize: 10),
-                      )
-                    ],
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
-                    padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15.0),
-                      color: Color.fromRGBO(255, 130, 130, 1),
                     ),
-                    child: Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.create,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Text(
-                          '나만의 스토리를 올려보세요',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.0),
+                        color: Color.fromRGBO(255, 130, 130, 1),
+                      ),
+                      child: Row(
+                        children: <Widget>[
+                          Icon(
+                            Icons.create,
+                            color: Colors.white,
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Text(
+                            '나만의 스토리를 올려보세요',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
               SizedBox(
                 height: 40,
