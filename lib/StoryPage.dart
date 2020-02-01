@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'StoryWriting.dart';
+import 'StoryDetail.dart';
 
 class StoryPage extends StatefulWidget {
   const StoryPage({Key key}) : super(key: key);
@@ -89,7 +90,16 @@ class _StoryPageState extends State<StoryPage> {
                   return Container(
                     margin: EdgeInsets.all(1.0),
                     child: Center(
-                      child: Image.asset('Images/juhee$index.jpg'),
+                      child: FlatButton(
+                          padding: EdgeInsets.all(0),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => new StoryDetail()),
+                            );
+                          },
+                          child: Image.asset('Images/juhee$index.jpg')),
                     ),
                   );
                 }),

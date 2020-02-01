@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'HomePage.dart';
-import 'ChatPage.dart';
-import 'ChannelPage.dart';
-import 'ProfilePage.dart';
-import 'StoryPage.dart';
+import '../HomePage.dart';
+import '../ChatPage.dart';
+import '../ChannelPage.dart';
+import '../ProfilePage.dart';
+import '../StoryPage.dart';
 
 
 class BottomBarPart extends StatefulWidget {

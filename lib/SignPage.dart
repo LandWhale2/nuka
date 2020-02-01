@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'ProfileSettingPage.dart';
 
+
 class SignPage extends StatefulWidget {
   @override
   _SignPageState createState() => _SignPageState();

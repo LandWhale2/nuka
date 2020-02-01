@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'SettingPage.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key key}) : super(key: key);
@@ -25,9 +26,18 @@ class _ProfilePageState extends State<ProfilePage> {
                     SizedBox(
                       width: 50,
                     ),
-                    Icon(
-                      Icons.settings,
-                      size: 50,
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => new SetiingPage()),
+                        );
+                      },
+                      child: Icon(
+                        Icons.settings,
+                        size: 50,
+                      ),
                     ),
                   ],
                 ),
@@ -133,6 +143,18 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: Color.fromRGBO(255, 130, 130, 1),
                           child: Text(
                             'Notice',
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+                      ),
+                      FlatButton(
+                        onPressed: () {},
+                        child: Container(
+                          margin: EdgeInsets.fromLTRB(0, 5, 0, 5),
+                          padding: EdgeInsets.fromLTRB(5, 10, 200, 10),
+                          color: Color.fromRGBO(255, 130, 130, 1),
+                          child: Text(
+                            'Sign Out',
                             style: TextStyle(fontSize: 20),
                           ),
                         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nuka/ProfileInfoJuhee.dart';
 
 class Near extends StatefulWidget {
   @override
@@ -26,6 +27,7 @@ class _NearState extends State<Near> {
         ),
       ),
       body: ListView(
+        padding: EdgeInsets.all(0),
         shrinkWrap: true,
         children: <Widget>[
           Column(
@@ -50,7 +52,16 @@ class _NearState extends State<Near> {
                   return Container(
                     margin: EdgeInsets.all(1.0),
                     child: Center(
-                      child: Image.asset('Images/juhee$index.jpg'),
+                      child: FlatButton(
+                        padding: EdgeInsets.all(0),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => new ProFileInfo()),
+                            );
+                          },
+                          child: Image.asset('Images/juhee$index.jpg')),
                     ),
                   );
                 }),
