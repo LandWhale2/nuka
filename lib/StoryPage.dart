@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'StoryWriting.dart';
 import 'StoryDetail.dart';
+import 'AlarmPage.dart';
 
 class StoryPage extends StatefulWidget {
   const StoryPage({Key key}) : super(key: key);
@@ -20,8 +21,26 @@ class _StoryPageState extends State<StoryPage> {
         children: <Widget>[
           Column(
             children: <Widget>[
-              SizedBox(
-                height: 30,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  FlatButton(
+                    padding: EdgeInsets.all(0),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => new AlarmPage()),
+                      );
+                    },
+                    child: Icon(
+                      Icons.alarm,
+                      size: 50,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 30,
+                  ),
+                ],
               ),
               FlatButton(
                 onPressed: () {
